@@ -1,0 +1,357 @@
+
+<!Doctype html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Termiticket - Sistema de tickets virtuales del Terminal Babahoyo</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = '/css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = '/css/font-awesome.min.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = '/css/simple-line-icons.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = '/css/animate.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = '/css/style.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = '/css/owl.carousel.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = '/css/owl.theme.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = '/css/owl.transitions.css') }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,100,200,300,500,600,800,900' rel='stylesheet'
+            type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700' rel='stylesheet'
+            type='text/css'>
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+        <div class="main-header" id="main-header">
+            <nav class="navbar mynav navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span
+                                class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{{ url_for('mainPage') }}">Termiticket</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#banner">Inicio</a></li>
+                            <li><a href="#work">Resultados</a></li>
+                            <li><a href="#testimonials">Testimonios</a></li>
+                            <li><a href="#about">Acerca</a></li>
+                            <li><a href="#contact">Contactenos</a></li>
+                            <li><a href="#">LogIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="banner" id="banner">
+            <div class="bg-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="banner-text">
+                                <h2>Bienvenido a <span>Termitickets</span></h2>
+                                <p>El sistema de boleteria virtual para el Terminal Terrestre de Babahoyo</p>
+                                <a href="#" class="banner-button">Regístrese aquí</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="feature-box media">
+                            <div class="icon-box text-center pull-left media-object"> <i class="icon-bulb"></i> </div>
+                            <div class="feature-text media-body">
+                                <h4>Compra virtual segura</h4>
+                                <p class="feature-detail">Compre su ticket desde la comodidad del hogar, pague de manera segura a través de PayPal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="feature-box media pull-left">
+                            <div class="icon-box text-center pull-left media-object"> <i class="icon-eye"></i> </div>
+                            <div class="feature-text media-body">
+                                <h4>Seleccione la cooperativa de su preferencia</h4>
+                                <p class="feature-detail">Puede elegir el horario que mas se adecue a su agenda, compre un boleto hasta con una semana de anticipación.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="feature-box media pull-left">
+                            <div class="icon-box text-center pull-left media-object"> <i class="icon-heart"></i> </div>
+                            <div class="feature-text media-body">
+                                <h4>Ticket a la medida</h4>
+                                <p class="feature-detail">Imprima o muestre su ticket virtual. Su ticket es único, podra mostrarlo desde su movil o imprimirlo para mostrarlo de manera tradicional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio -->
+        <div id="work" class="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1 text-center text">
+                        <h3>Reducción del tráfico diario</h3>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="portfolio-item"> <a href="#"> <img class="img-portfolio img-responsive"
+                                            src="{{ url_for('static', filename = '/images/portfolio-1.jpg') }}"> </a> </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="portfolio-item"> <a href="#"> <img class="img-portfolio img-responsive"
+                                            src="{{ url_for('static', filename = '/images/portfolio-2.jpg') }}"> </a> </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="portfolio-item"> <a href="#"> <img class="img-portfolio img-responsive"
+                                            src="{{ url_for('static', filename = '/images/portfolio-3.jpg') }}"> </a> </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="portfolio-item"> <a href="#"> <img class="img-portfolio img-responsive"
+                                            src="{{ url_for('static', filename = '/images/portfolio-4.jpg') }}"> </a> </div>
+                            </div>
+                        </div>
+                        <!-- /.row (nested) -->
+                        <!-- <a href="#" class="view-more">View More Items</a> -->
+                    </div>
+                    <!-- /.col-lg-10 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <div class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <h3>Nuestros testimonios</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
+                        <div id="owl-demo" class="owl-carousel owl-theme test">
+                            <div class="item">
+                                <p><sup><i class="fa fa-quote-left"></i></sup>Es una experiencia super comoda, pude comprar mi boleto en minutos. Lo mejor fue que no tuve que acercarme a la oficina en ningun momento<sup><i
+                                            class="fa fa-quote-right"></i></sup></p>
+                                <div class="test-img"> <img src="{{ url_for('static', filename = '/images/team-img-01.jpg') }}" />
+                                    <p><strong>Marcos Andrade</strong></p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p><sup><i class="fa fa-quote-left"></i></sup>El sitio es muy util ahora puedo separar boletos dias antes de mi viaje. Puedo subir directamente al bus. Me ahorro tiempo<sup><i
+                                            class="fa fa-quote-right"></i></sup></p>
+                                <div class="test-img"> <img src="{{ url_for('static', filename = '/images/team-img-02.jpg') }}" />
+                                    <p><strong>Sonía Ayala</strong></p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p><sup><i class="fa fa-quote-left"></i></sup>Me encanto poder mostrar mi boleto desde mi celular, fue muy practico. Me siento bien al ayudar al medio ambiente con la reducción de papel.<sup><i class="fa fa-quote-right"></i></sup></p>
+                                <div class="test-img"> <img src="{{ url_for('static', filename = '/images/team-img-03.jpg') }}" />
+                                    <p><strong>John Deo</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="call-to-action">
+            <div class="call-overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-10">
+                            <div class="subscribe-text">
+                                <h3>Suscríbase para mas noticias</h3>
+                                <p>Sea el primero en enterarse de nuestras promociones!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <input type="email" class="form-control" id="name" placeholder="Correo electronico" style="color: white;">
+                            <a href="#" class="subscribe-button">Suscribirse</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h3>Acerca de nosotros</h3>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-text">
+                            <p>Termitickets nace de la necesidad de disminuir el contacto físico exigido por las medidas de bioseguridad actuales.
+                                Nuestra misión principal es reducir las largas filas generadas en el terminal. Buscamos lograr nuestro objetivo mediante la adopción gradual de una plataforma virtual para la expedición de tickets. </p>
+                            <p>Olvidese de las filas en epoca de feriado o dias de alto flujo turístico, con Termitickets podra reservar su boleto con varios dias de anticipación o incluso comprarlo unas pocas horas antes de su viaje.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="col-md-6 col-sm-6 col-xs-6 block">
+                            <div class="counter-item text-center">
+                                <h5>Nuestros clientes</h5>
+                                <div class="timer" data-from="0" data-to="55" data-speed="5000" data-refresh-interval="50">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <div class="counter-item text-center">
+                                <h5>Tickets vendidos</h5>
+                                <div class="timer" data-from="0" data-to="88" data-speed="5000" data-refresh-interval="50">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <h3>Contacto</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-sm-offset-0 col-sm-6 col-xs-offset-1 col-xs-10">
+                        <div class="contact-form">
+                            <form role="form">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="name" placeholder="Nombre">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" id="email" placeholder="Correo">
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea class="form-control" placeholder="Mensaje" rows="6"></textarea>
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="contact-button">Enviar Mensaje</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-5 col-xs-offset-1 col-xs-10">
+                        <div class="address">
+                            <h4>Dirección</h4>
+                            <p>Babahoyo, Los Rios - Ecuador
+                                <br />
+                                Oficina 25 Planta baja
+                            <div class="email"><i class="fa fa-at"></i>termiticketsinfo@gmail.com<br>
+                                <i class="fa fa-phone"></i>(05) 273-4817
+                                <br />
+                                <i class="fa fa-mobile"></i>+593 95 978 2097
+                            </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4"> <span class="copyright">Copyright &copy; Tello 2021</span> </div>
+                    <div class="col-md-4">
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://twitter.com/transvialep" target="_blank"><i class="fa fa-twitter"></i></a> </li>
+                            <li><a href="https://www.facebook.com/terminalterrestrebabahoyo/" target="_blank"><i class="fa fa-facebook"></i></a> </li>
+                            <li><a href="https://ec.linkedin.com/in/marcomejiaz" target="_blank"><i class="fa fa-linkedin"></i></a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-inline quicklinks">
+                            <li>Creado por un estudiante del <a href="http://istb.edu.ec" target="_blank">ISTB</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename = 'js/owl.carousel.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename = 'js/jquery.countTo.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename = 'js/jquery.waypoints.min.js') }}"></script>
+        <script>
+            $(document).ready(function () {
+
+                $("#owl-demo").owlCarousel({
+
+                    navigation: false, // Show next and prev buttons
+                    slideSpeed: 500,
+                    autoPlay: 3000,
+                    paginationSpeed: 400,
+                    singleItem: true
+
+                    // "singleItem:true" is a shortcut for:
+                    // items : 1, 
+                    // itemsDesktop : false,
+                    // itemsDesktopSmall : false,
+                    // itemsTablet: false,
+                    // itemsMobile : false
+
+                });
+
+            });
+
+            /*$('.timer').each(count);*/
+            jQuery(function ($) {
+                // custom formatting example
+                $('.timer').data('countToOptions', {
+                    formatter: function (value, options) {
+                        return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+                    }
+                });
+
+
+                // start all the timers
+                $('#testimonials').waypoint(function () {
+                    $('.timer').each(count);
+                });
+
+                function count(options) {
+                    var $this = $(this);
+                    options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+                    $this.countTo(options);
+                }
+            });
+
+
+            $(document).ready(function () {
+                // Add smooth scrolling to all links in navbar + footer link
+                $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                });
+            })
+        </script>
+    </body>
+
+</html>
