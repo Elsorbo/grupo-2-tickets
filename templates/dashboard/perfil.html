@@ -1,0 +1,80 @@
+{% extends 'dashboard/index.html' %}
+
+{% block title %}Perfil{% endblock %}
+
+{% block sectionTitle %}Panel de administración de Perfil{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Información personal</h4>
+        <div class="form-group row">
+            <label for="fname" class="col-sm-3 text-end control-label col-form-label">Nombres</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="fname" placeholder="Sus dos nombres" value="Maria Mercedes">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="lname" class="col-sm-3 text-end control-label col-form-label">Apellidos</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="lname" placeholder="Sus dos apellidos"
+                    value="Gonzalez Herrera">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="lname" class="col-sm-3 text-end control-label col-form-label">Contraseña</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="lname" placeholder="Contraseña de la cuenta"
+                    value="12345678">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="email1" class="col-sm-3 text-end control-label col-form-label">Dirección</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="email1" placeholder="Dirección Domiciliaria"
+                    value="Avenida 5 de Junio">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="cono1" class="col-sm-3 text-end control-label col-form-label">Correo</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="cono1" placeholder="Correo electronico"
+                    value="maricagonzalesh@gmail.com">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="cono1" class="col-sm-3 text-end control-label col-form-label">Descripción</label>
+            <div class="col-sm-9">
+                <textarea class="form-control"></textarea>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Actualizar Perfil</button>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Eliminar cuenta</h4>
+        <div class="form-group row">
+            <label for="lname" class="col-sm-3 text-end control-label col-form-label">Contraseña</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="lname" placeholder="Contraseña de la cuenta"
+                    value="">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="lname" class="col-sm-3 text-end control-label col-form-label">Repetir Contraseña</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="lname" placeholder="Contraseña de la cuenta"
+                    value="">
+            </div>
+        </div>
+        <button id="deleteAccountBtn" type="button" class="btn btn-danger">Eliminar cuenta</button>
+    </div>
+</div>
+<script>
+    
+    let deleteAccountBtn = document.getElementById("deleteAccountBtn");
+
+    deleteAccountBtn.addEventListener("click", (e) => {window.location.href="/"});
+</script>
+{% endblock %}

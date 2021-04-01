@@ -1,0 +1,205 @@
+
+<style>
+    #invoice-POS {
+        box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+        padding: 2mm;
+        margin: 0 auto;
+        width: 44mm;
+        background: #FFF;
+    }
+
+    #invoice-POS ::selection {
+        background: #f31544;
+        color: #FFF;
+    }
+
+    #invoice-POS ::moz-selection {
+        background: #f31544;
+        color: #FFF;
+    }
+
+    #invoice-POS h1 {
+        font-size: 1.5em;
+        color: #222;
+    }
+
+    #invoice-POS h2 {
+        font-size: 0.9em;
+    }
+
+    #invoice-POS h3 {
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 2em;
+    }
+
+    #invoice-POS p {
+        font-size: 0.7em;
+        color: #666;
+        line-height: 1.2em;
+    }
+
+    #invoice-POS #top,
+    #invoice-POS #mid,
+    #invoice-POS #bot {
+        /* Targets all id with 'col-' */
+        border-bottom: 1px solid #EEE;
+    }
+
+    #invoice-POS #top {
+        min-height: 100px;
+    }
+
+    #invoice-POS #mid {
+        min-height: 80px;
+    }
+
+    #invoice-POS #bot {
+        min-height: 50px;
+    }
+
+    #invoice-POS #top .logo {
+        height: 60px;
+        width: 60px;
+        background: url(http://michaeltruong.ca/images/logo1.png) no-repeat;
+        background-size: 60px 60px;
+    }
+
+    #invoice-POS .clientlogo {
+        float: left;
+        height: 60px;
+        width: 60px;
+        background: url(http://michaeltruong.ca/images/client.jpg) no-repeat;
+        background-size: 60px 60px;
+        border-radius: 50px;
+    }
+
+    #invoice-POS .info {
+        display: block;
+        margin-left: 0;
+    }
+
+    #invoice-POS .title {
+        float: right;
+    }
+
+    #invoice-POS .title p {
+        text-align: right;
+    }
+
+    #invoice-POS table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    #invoice-POS .tabletitle {
+        font-size: 0.5em;
+        background: #EEE;
+    }
+
+    #invoice-POS .service {
+        border-bottom: 1px solid #EEE;
+    }
+
+    #invoice-POS .item {
+        width: 24mm;
+    }
+
+    #invoice-POS .itemtext {
+        font-size: 0.5em;
+    }
+
+    #invoice-POS #legalcopy {
+        margin-top: 5mm;
+    }
+</style>
+<div id="invoice-POS">
+
+    <center id="top">
+        <div class="logo"></div>
+        <div class="info">
+            <h2>Terminal Terrestre Babahoyo</h2>
+        </div>
+        <!--End Info-->
+    </center>
+    <!--End InvoiceTop-->
+
+    <div id="mid">
+        <div class="info">
+            <h2>Detalles</h2>
+            <p>
+                Dirección : street city, state 0000</br>
+                Correo : ttbabahoyo@gmail.com</br>
+                Teléfonos : 555-555-5555</br>
+            </p>
+        </div>
+    </div>
+    <!--End Invoice Mid-->
+
+    <div id="bot">
+
+        <div id="table">
+            <table>
+                <tr class="tabletitle">
+                    <td class="item">
+                        <h2>Item</h2>
+                    </td>
+                    <td class="Hours">
+                        <h2>#</h2>
+                    </td>
+                    <td class="Rate">
+                        <h2>Sub Total</h2>
+                    </td>
+                </tr>
+
+                <tr class="service">
+                    <td class="tableitem">
+                        <p class="itemtext">Viaje de ida</p>
+                    </td>
+                    <td class="tableitem">
+                        <p class="itemtext">1</p>
+                    </td>
+                    <td class="tableitem">
+                        <p class="itemtext">$1.50</p>
+                    </td>
+                </tr>
+
+                <tr class="service">
+                    <td class="tableitem">
+                        <p class="itemtext">Tasa terminal</p>
+                    </td>
+                    <td class="tableitem">
+                        <p class="itemtext">1</p>
+                    </td>
+                    <td class="tableitem">
+                        <p class="itemtext">$0.30</p>
+                    </td>
+                </tr>
+
+                
+
+
+                <tr class="tabletitle">
+                    <td></td>
+                    <td class="Rate">
+                        <h2>Total</h2>
+                    </td>
+                    <td class="payment">
+                        <h2>$1.80</h2>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <!--End Table-->
+
+        <div id="legalcopy">
+            <p class="legal">
+                <img width="160px" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/69cde6b4-048f-468e-ae0a-346ee03585f7/d5jdudb-b58858be-36f2-44b4-b0ee-e25453e8b399.png/v1/fill/w_847,h_510,strp/codigo_de_barras_png_by_a_diaaeditions_d5jdudb-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01MTAiLCJwYXRoIjoiXC9mXC82OWNkZTZiNC0wNDhmLTQ2OGUtYWUwYS0zNDZlZTAzNTg1ZjdcL2Q1amR1ZGItYjU4ODU4YmUtMzZmMi00NGI0LWIwZWUtZTI1NDUzZThiMzk5LnBuZyIsIndpZHRoIjoiPD04NDcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.P82k66-25rp1Rm6jA44hR5zVh46QbcTr3-jz9UeC8Uk" alt="">
+            </p>
+        </div>
+
+    </div>
+    <!--End InvoiceBot-->
+</div>
+<!--End Invoice-->

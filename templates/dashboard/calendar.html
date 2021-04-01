@@ -1,0 +1,504 @@
+<head>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<style>
+    table {
+        font-family: sans-serif;
+        width: 100%;
+        border-spacing: 0;
+        border-collapse: separate;
+        table-layout: fixed;
+        margin-bottom: 50px;
+    }
+
+    table thead tr th {
+        background: #626E7E;
+        color: #d1d5db;
+        padding: 0.5em;
+        overflow: hidden;
+    }
+
+    table thead tr th:first-child {
+        border-radius: 3px 0 0 0;
+    }
+
+    table thead tr th:last-child {
+        border-radius: 0 3px 0 0;
+    }
+
+    table thead tr th .day {
+        display: block;
+        font-size: 1.2em;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin: 0 auto 5px;
+        padding: 5px;
+        line-height: 1.8;
+    }
+
+    table thead tr th .day.active {
+        background: #d1d5db;
+        color: #626E7E;
+    }
+
+    table thead tr th .short {
+        display: none;
+    }
+
+    table thead tr th i {
+        vertical-align: middle;
+        font-size: 2em;
+    }
+
+    table tbody tr {
+        background: #d1d5db;
+    }
+
+    table tbody tr:nth-child(odd) {
+        background: #c8cdd4;
+    }
+
+    table tbody tr:nth-child(4n+0) td {
+        border-bottom: 1px solid #626E7E;
+    }
+
+    table tbody tr td {
+        text-align: center;
+        vertical-align: middle;
+        border-left: 1px solid #626E7E;
+        position: relative;
+        height: 32px;
+        cursor: pointer;
+    }
+
+    table tbody tr td:last-child {
+        border-right: 1px solid #626E7E;
+    }
+
+    table tbody tr td.hour {
+        font-size: 2em;
+        padding: 0;
+        color: #626E7E;
+        background: #fff;
+        border-bottom: 1px solid #626E7E;
+        border-collapse: separate;
+        min-width: 100px;
+        cursor: default;
+    }
+
+    table tbody tr td.hour span {
+        display: block;
+    }
+
+    @media (max-width: 60em) {
+        table thead tr th .long {
+            display: none;
+        }
+
+        table thead tr th .short {
+            display: block;
+        }
+
+        table tbody tr td.hour span {
+            transform: rotate(270deg);
+            -webkit-transform: rotate(270deg);
+            -moz-transform: rotate(270deg);
+        }
+    }
+
+    @media (max-width: 27em) {
+        table thead tr th {
+            font-size: 65%;
+        }
+
+        table thead tr th .day {
+            display: block;
+            font-size: 1.2em;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            margin: 0 auto 5px;
+            padding: 5px;
+        }
+
+        table thead tr th .day.active {
+            background: #d1d5db;
+            color: #626E7E;
+        }
+
+        table tbody tr td.hour {
+            font-size: 1.7em;
+        }
+
+        table tbody tr td.hour span {
+            transform: translateY(16px) rotate(270deg);
+            -webkit-transform: translateY(16px) rotate(270deg);
+            -moz-transform: translateY(16px) rotate(270deg);
+        }
+    }
+    
+    td {
+    
+      /* text-shadow: 1px 1px 1px black; */
+      color: #3c415c;
+      font-weight: bold;
+
+    }
+
+    .cupo {
+
+      background-color: #c0e218;
+      border-radius: 8px;
+      box-shadow: 1px 2px 3px black;
+      color: #111d5e;
+      display: block;
+      font-size: 12px;
+      text-shadow: none;
+      padding: 6px;
+      width: 90%;
+
+    }
+
+</style>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+        <span class="day">1</span>
+        <span class="long">Domingo</span>
+        <span class="short">Dom</span>
+      </th>
+      <th>
+        <span class="day">2</span>
+        <span class="long">Lunes</span>
+        <span class="short">Lun</span>
+      </th>
+      <th>
+        <span class="day">3</span>
+        <span class="long">Martes</span>
+        <span class="short">Mar</span>
+      </th>
+      <th>
+        <span class="day">4</span>
+        <span class="long">Miercoles</span>
+        <span class="short">Mie</span>
+      </th>
+      <th>
+        <span class="day active">5</span>
+        <span class="long">Jueves</span>
+        <span class="short">Jue</span>
+      </th>
+      <th>
+        <span class="day">6</span>
+        <span class="long">Viernes</span>
+        <span class="short">Vie</span>
+      </th>
+      <th>
+        <span class="day">7</span>
+        <span class="long">Sábado</span>
+        <span class="short">Sáb</span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="hour" rowspan="4"><span>04:00</span></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="hour" rowspan="4"><span>04:30</span></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><span id="tag6" class="cupo"> Guayaquil: 25 <i class="fas fa-edit" style="margin-left: 16px;"></i><i class="far fa-trash-alt borrarCupoBtn" style="margin-left: 6px;"></i></span></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><span id="tag4" class="cupo"> 3 postes: 25 <i class="fas fa-edit" style="margin-left: 16px;"></i><i class="far fa-trash-alt borrarCupoBtn" style="margin-left: 6px;"></i></span></td>
+      <td></td>
+      <td><span id="tag7" class="cupo" style="display: none;"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><span id="tag5" class="cupo">Yaguachi: 4 <i class="fas fa-edit" style="margin-left: 16px;"></i><i class="far fa-trash-alt borrarCupoBtn" style="margin-left: 6px;"></i></span></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    <tr>
+      <td class="hour" rowspan="4"><span>05:00</span></td>
+      <td></td>
+      <td><span class="cupo" style="background-color: #c70039; color: white;"> Dúran: 10 <i class="far fa-eye" style="margin-left: 16px;"></i></span></td>
+      <td></td>
+      <td></td>
+      <td><span id="tag1" class="cupo"> Guayaquil: 6 <i class="fas fa-edit" style="margin-left: 16px;"></i><i class="far fa-trash-alt borrarCupoBtn" style="margin-left: 6px;"></i></span></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><span class="cupo" style="background-color: #c70039; color: white;"> Guayaquil: 22 <i class="far fa-eye" style="margin-left: 16px;"></i></span></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><span class="cupo" style="background-color: #c70039; color: white;"> Dúran: 5 <i class="far fa-eye" style="margin-left: 16px;"></i></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><span id="tag2" class="cupo"> San Juan: 6 <i class="fas fa-edit" style="margin-left: 16px;"></i><i class="far fa-trash-alt borrarCupoBtn" style="margin-left: 6px;"></i></span></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="hour" rowspan="4"><span>05:30</span></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><span id="tag3" class="cupo"> Caluma: 16 <i class="fas fa-edit" style="margin-left: 16px;"></i><i class="far fa-trash-alt borrarCupoBtn" style="margin-left: 6px;"></i></span></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="hour" rowspan="4"><span>06:00</span></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="hour" rowspan="4"><span>06:30</span></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="hour" rowspan="4"><span>07:00</span></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td class="hour" rowspan="4"><span>07:30</span></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,120 @@
+{% extends 'dashboard/index.html' %}
+
+{% block title %}Reportes{% endblock %}
+
+{% block sectionTitle %}Panel de reportes{% endblock %}
+
+{% block content %}
+<button id="pdfBtn" type="button" class="btn btn-outline-danger"><i class="mdi mdi-file-pdf"></i> Generar PDF</button>
+<a id="anchorPDF" href="/static/pdf/reporte_ventas.pdf" download="reporte_ventas_.pdf" style="visibility: hidden;">Reporte</a>
+<div class="form-group row" data-select2-id="12">
+    <label class="col-md-3 mt-3">.</label>
+    <div class="col-md-9" data-select2-id="11">
+        <select id="chartSelect" class="select2 form-select shadow-none select2-hidden-accessible" style="width: 60%; height:36px;" data-select2-id="1" tabindex="-1" aria-hidden="true" name="destino">
+            <option value = "0" data-select2-id="3">Select</option>
+            <option value = "1"data-select2-id="36">Ventas de boletos</option>
+            <option value = "2"data-select2-id="35">Estadísticas de viajes</option>
+        </select>
+    </div>
+</div>
+<div id="cardSales" class="card">
+    <div class="card-body">
+        <h5 class="card-title">Ventas de boletos en tiempo real</h5>
+        <div id="real-time" style="height: 400px; padding: 0px; position: relative;"><canvas class="flot-base"
+                style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1019px; height: 400px;"
+                width="1019" height="400"></canvas>
+            <div class="flot-text" style="position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84);">
+                <div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; inset: 0px;">
+                    <div style="position: absolute; max-width: 92px; top: 381px; left: 18px; text-align: center;"
+                        class="flot-tick-label tickLabel">0</div>
+                    <div style="position: absolute; max-width: 92px; top: 381px; left: 114px; text-align: center;"
+                        class="flot-tick-label tickLabel">10</div>
+                    <div style="position: absolute; max-width: 92px; top: 381px; left: 213px; text-align: center;"
+                        class="flot-tick-label tickLabel">20</div>
+                    <div style="position: absolute; max-width: 92px; top: 381px; left: 313px; text-align: center;"
+                        class="flot-tick-label tickLabel">30</div>
+                    <div style="position: absolute; max-width: 92px; top: 381px; left: 413px; text-align: center;"
+                        class="flot-tick-label tickLabel">40</div>
+                    <div style="position: absolute; max-width: 92px; top: 381px; left: 512px; text-align: center;"
+                        class="flot-tick-label tickLabel">50</div>
+                    <div style="position: absolute; max-width: 92px; top: 381px; left: 612px; text-align: center;"
+                        class="flot-tick-label tickLabel">60</div>
+                    <div style="position: absolute; max-width: 92px; top: 381px; left: 712px; text-align: center;"
+                        class="flot-tick-label tickLabel">70</div>
+                    <div style="position: absolute; max-width: 92px; top: 381px; left: 812px; text-align: center;"
+                        class="flot-tick-label tickLabel">80</div>
+                    <div style="position: absolute; max-width: 92px; top: 381px; left: 911px; text-align: center;"
+                        class="flot-tick-label tickLabel">90</div>
+                </div>
+                <div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; inset: 0px;">
+                    <div style="position: absolute; top: 366px; left: 2px; text-align: right;"
+                        class="flot-tick-label tickLabel">30</div>
+                    <div style="position: absolute; top: 314px; left: 2px; text-align: right;"
+                        class="flot-tick-label tickLabel">35</div>
+                    <div style="position: absolute; top: 262px; left: 2px; text-align: right;"
+                        class="flot-tick-label tickLabel">40</div>
+                    <div style="position: absolute; top: 209px; left: 2px; text-align: right;"
+                        class="flot-tick-label tickLabel">45</div>
+                    <div style="position: absolute; top: 157px; left: 2px; text-align: right;"
+                        class="flot-tick-label tickLabel">50</div>
+                    <div style="position: absolute; top: 105px; left: 2px; text-align: right;"
+                        class="flot-tick-label tickLabel">55</div>
+                    <div style="position: absolute; top: 53px; left: 2px; text-align: right;"
+                        class="flot-tick-label tickLabel">60</div>
+                    <div style="position: absolute; top: 0px; left: 2px; text-align: right;"
+                        class="flot-tick-label tickLabel">65</div>
+                </div>
+            </div><canvas class="flot-overlay"
+                style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1019px; height: 400px;"
+                width="1019" height="400"></canvas>
+        </div>
+        <p>Time between updates:
+            <input id="updateInterval" type="text" value="" style="text-align: right; width:5em"> milliseconds
+        </p>
+    </div>
+</div>
+
+<div class="card" id="cardTravels" style="display: none;">
+    <div class="card-body">
+        <img src="/static/images/chartTravels.jpg" alt="chartTravels" width="100%">
+    </div>
+</div>
+
+<script>
+    
+    let pdfBtn = document.getElementById("pdfBtn");
+    let chartSales = document.getElementById("cardSales");
+    let chartTravels = document.getElementById("cardTravels");
+    document.getElementById("chartSelect").addEventListener("change", (e) => {
+
+        let target = e.target;
+
+        switch (target.value) {
+            case "0":
+                
+                break;
+        
+            case "1":
+                chartSales.style.display = "block";
+                chartTravels.style.display = "none";
+                break;
+        
+            case "2":
+                chartSales.style.display = "none";
+                chartTravels.style.display = "block";
+                break;
+        
+            default:
+                break;
+        }
+
+    });
+
+    pdfBtn.addEventListener("click", (e)=> {
+        
+        document.getElementById("anchorPDF").click();
+
+    });
+
+</script>
+{% endblock %}

@@ -1,0 +1,169 @@
+{% extends 'dashboard/index.html' %}
+{% block title %}Clientes{% endblock %}
+<link href="/static/dashboard/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Tabla de usuarios</h5>
+        <div class="table-responsive">
+            <div id="zero_config_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="dataTables_length" id="zero_config_length"><label>Mostrar <select
+                                    name="zero_config_length" aria-controls="zero_config"
+                                    class="form-control form-control-sm">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select> entradas</label></div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div id="zero_config_filter" class="dataTables_filter"><label>Buscar:<input type="search"
+                                    class="form-control form-control-sm" placeholder=""
+                                    aria-controls="zero_config"></label>
+
+                            <div style="display: inline-block; margin-left: 200px;">
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table id="zero_config" class="table table-striped table-bordered dataTable" role="grid"
+                            aria-describedby="zero_config_info">
+                            <thead>
+                                <tr role="row">
+                                    <th class="sorting_asc" tabindex="0" aria-controls="zero_config" rowspan="1"
+                                        colspan="1" style="width: 138.617px;" aria-sort="ascending"
+                                        aria-label="Name: activate to sort column descending">Nombre</th>
+                                    <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1"
+                                        style="width: 229.6px;"
+                                        aria-label="Position: activate to sort column ascending">Rol
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1"
+                                        style="width: 41.5167px;" aria-label="Age: activate to sort column ascending">
+                                        Edad</th>
+                                    <th class="sorting" tabindex="0" aria-controls="zero_config" rowspan="1" colspan="1"
+                                        style="width: 86.9833px;"
+                                        aria-label="Start date: activate to sort column ascending">
+                                        Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+
+                                <tr role="row" class="odd">
+                                    <td class="sorting_1">Airi Satou</td>
+                                    <td>Cliente boletería</td>
+                                    <td>33</td>
+                                    <td>Deshabilitado</td>
+
+                                </tr>
+                                <tr role="row" class="even">
+                                    <td class="sorting_1">Angelica Ramos</td>
+                                    <td>Cliente boletería</td>
+                                    <td>47</td>
+                                    <td>Activo</td>
+
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td class="sorting_1">Ashton Cox</td>
+                                    <td>Cliente boletería</td>
+                                    <td>66</td>
+                                    <td>Activo</td>
+
+                                </tr>
+                                <tr role="row" class="even">
+                                    <td class="sorting_1">Bradley Greer</td>
+                                    <td>Cliente boletería</td>
+                                    <td>41</td>
+                                    <td>Deshabilitado</td>
+
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td class="sorting_1">Brenden Wagner</td>
+                                    <td>Cliente boletería</td>
+                                    <td>28</td>
+                                    <td>Activo</td>
+
+                                </tr>
+              
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-5">
+                        <div class="dataTables_info" id="zero_config_info" role="status" aria-live="polite">Showing 1 to
+                            10 of 57 entries</div>
+                    </div>
+                    <div class="col-sm-12 col-md-7">
+                        <div class="dataTables_paginate paging_simple_numbers" id="zero_config_paginate">
+                            <ul class="pagination">
+                                <li class="paginate_button page-item previous disabled" id="zero_config_previous"><a
+                                        href="#" aria-controls="zero_config" data-dt-idx="0" tabindex="0"
+                                        class="page-link">Previous</a>
+                                </li>
+                                <li class="paginate_button page-item active"><a href="#" aria-controls="zero_config"
+                                        data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                <li class="paginate_button page-item "><a href="#" aria-controls="zero_config"
+                                        data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
+                                <li class="paginate_button page-item "><a href="#" aria-controls="zero_config"
+                                        data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
+                                <li class="paginate_button page-item "><a href="#" aria-controls="zero_config"
+                                        data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
+                                <li class="paginate_button page-item "><a href="#" aria-controls="zero_config"
+                                        data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
+                                <li class="paginate_button page-item "><a href="#" aria-controls="zero_config"
+                                        data-dt-idx="6" tabindex="0" class="page-link">6</a></li>
+                                <li class="paginate_button page-item next" id="zero_config_next"><a href="#"
+                                        aria-controls="zero_config" data-dt-idx="7" tabindex="0"
+                                        class="page-link">Next</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+<script>
+
+    let formBtn = document.getElementById("formBtn");
+    let tableBody = document.getElementById("tableBody");
+    let closeModalBtn = document.getElementById("closeModalBtn");
+
+    formBtn.addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+        let form = e.target.form;
+
+        tableBody.innerHTML = `
+            <tr role="row" class="odd">
+                <td class="sorting_1">${form.nombres.value + ' ' + form.apellidos.value}</td>
+                <td>${form.rol.value}</td>
+                <td>#${form.oficina.value}</td>
+                <td>${form.edad.value}</td>
+                <td>Activo</td>
+            </tr>` + tableBody.innerHTML;
+        
+        closeModalBtn.click();
+        alert("Se registro exitosamente al empleado")
+    });
+
+</script>
+{% endblock %}

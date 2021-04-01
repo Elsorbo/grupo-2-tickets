@@ -1,0 +1,96 @@
+
+{% extends 'dashboard/index.html' %}
+
+{% block title %}Nuevo Cupo{% endblock %}
+
+{% block content %}
+<div class="card" data-select2-id="14" style="width: 60%; margin: 12px auto;">
+    <form action="/registrarCupo" method="POST">
+    <div class="card-body" data-select2-id="13">
+        <h3 class="card-title">Nuevo Cupo</h3>
+        <div class="form-group row" data-select2-id="12">
+            <label class="col-md-3 mt-3">Destino</label>
+            <div class="col-md-9" data-select2-id="11">
+                <select class="select2 form-select shadow-none select2-hidden-accessible"
+                    style="width: 60%; height:36px;" data-select2-id="1" tabindex="-1" aria-hidden="true" name="destino">
+                    <option data-select2-id="3">Select</option>
+                        <option data-select2-id="35">Guayaquil</option>
+                        <option data-select2-id="36">Tres Postes</option>
+                        <option data-select2-id="37">Dúran</option>
+                        <option data-select2-id="38">Cruce de Yaguachi</option>
+                        <option data-select2-id="39">Jujan</option>
+                        <option data-select2-id="40">San Juan</option>
+                        <option data-select2-id="41">Puebloviejo</option>
+                        <option data-select2-id="42">Catarama</option>
+                        <option data-select2-id="43">Ricaurte</option>
+                        <option data-select2-id="44">Caluma</option>
+                        <option data-select2-id="45">Para mínima</option>         
+                </select>
+            </div>
+        </div>
+        <div class="form-group row" data-select2-id="12">
+            <label class="col-md-3 mt-3">Horario</label>
+            <div class="col-md-9" data-select2-id="11">
+                <select class="select2 form-select shadow-none select2-hidden-accessible"
+                    style="width: 60%; height:36px;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                    <option data-select2-id="3">Select</option>
+                    <optgroup label="Horario" data-select2-id="34">
+                        <option value="AL" data-select2-id="35">04:00</option>
+                        <option value="AR" data-select2-id="36">04:30</option>
+                        <option value="IL" data-select2-id="37">05:00</option>
+                        <option value="IA" data-select2-id="38">05:30</option>
+                        <option value="KS" data-select2-id="39">06:00</option>
+                        <option value="KY" data-select2-id="40">06:30</option>
+                        <option value="LA" data-select2-id="41">07:00</option>
+                        <option value="MN" data-select2-id="42">07:30</option>
+                        <option value="MS" data-select2-id="43">08:00</option>
+                        <option value="MO" data-select2-id="44">08:30</option>
+                        <option value="OK" data-select2-id="45">09:00</option>
+                        <option value="SD" data-select2-id="46">09:30</option>
+                        <option value="TX" data-select2-id="47">10:00</option>
+                        <option value="TN" data-select2-id="48">10:30</option>
+                        <option value="WI" data-select2-id="49">11:00</option>
+                        <option value="WI" data-select2-id="49">11:30</option>
+                    </optgroup>
+                    
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-md-3 mt-3">Número de cupos</label>
+            <div class="col-sm-9">
+                <input type="number" min="1" value="10" class="form-control" id="fname" placeholder="Cantidad de cupos para el destino" name="cantidad">
+            </div>
+        </div>
+        
+        <div class="form-group row" data-select2-id="12">
+            <label class="col-md-3 mt-3">Unidad de transporte (Autobus)</label>
+            <div class="col-md-9" data-select2-id="11">
+                <select class="select2 form-select shadow-none select2-hidden-accessible"
+                    style="width: 100%; height:36px;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                    <option data-select2-id="3">Select</option>
+                        <option value="AL" data-select2-id="35">Disco 01</option>
+                        <option value="AR" data-select2-id="36">Disco 03</option>
+                        <option value="IL" data-select2-id="37">Disco 12</option>
+                        <option value="IA" data-select2-id="38">Disco 22</option>
+                        <option value="KS" data-select2-id="39">Disco 28</option>
+                        <option value="KY" data-select2-id="40">Disco 32</option>
+                        <option value="LA" data-select2-id="41">Disco 54</option>
+                        <option value="MN" data-select2-id="42">Disco 80</option>
+                        <option value="MS" data-select2-id="43">Disco 92</option>
+                        <option value="MO" data-select2-id="44">Disco 102</option>
+                        <option value="OK" data-select2-id="45">Disco 120</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+    <div class="border-top">
+        <div class="card-body">
+                <button type="submit" class="btn btn-primary">Agregar cupos</button>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+{% endblock %}

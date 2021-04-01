@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Termiticket - Sistema de tickets virtuales del Terminal Babahoyo</title>
+        <title>Página principal | Termiticket</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = '/css/bootstrap.min.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = '/css/font-awesome.min.css') }}" />
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = '/css/simple-line-icons.css') }}" />
@@ -36,7 +36,7 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span
                                 class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="{{ url_for('mainPage') }}">Termiticket</a>
+                        <a class="navbar-brand" href="#banner">Termiticket</a>
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
@@ -45,7 +45,7 @@
                             <li><a href="#testimonials">Testimonios</a></li>
                             <li><a href="#about">Acerca</a></li>
                             <li><a href="#contact">Contactenos</a></li>
-                            <li><a href="#">LogIn</a></li>
+                            <li><a id="loginBtn" href="{{ url_for('loginPage') }}">Iniciar sesion</a></li>
                         </ul>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                             <div class="banner-text">
                                 <h2>Bienvenido a <span>Termitickets</span></h2>
                                 <p>El sistema de boleteria virtual para el Terminal Terrestre de Babahoyo</p>
-                                <a href="#" class="banner-button">Regístrese aquí</a>
+                                <a id="registerBtn" href="/registro" class="banner-button">Regístrese aquí</a>
                             </div>
                         </div>
                     </div>
@@ -350,7 +350,12 @@
                         window.location.hash = hash;
                     });
                 });
+                
+                $('#loginBtn').unbind("click");
+                $('#registerBtn').unbind("click");
+
             })
+
         </script>
     </body>
 
