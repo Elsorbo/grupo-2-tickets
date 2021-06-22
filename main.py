@@ -14,9 +14,9 @@ def loginPage():
     data = {}
     loginRedirect = {
         "usuarioCliente": "/reservarCupos",
-        "usuarioSecretaria": "/boletos",
+        "usuarioSecretaria": "/registrarCupos",
         "usuarioAdministrador": "/registrarCupo",
-        "usuarioSupervisor": "/"
+        "usuarioSupervisor": "/reportes"
     }
     
     if( request.form ):
