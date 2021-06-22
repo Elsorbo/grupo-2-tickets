@@ -14,7 +14,7 @@ def loginPage():
     data = {}
     loginRedirect = {
         "usuarioCliente": "/reservarCupos",
-        "usuarioSecretaria": "/registrarCupos",
+        "usuarioSecretaria": "/registrarCupo",
         "usuarioAdministrador": "/registrarCupo",
         "usuarioSupervisor": "/reportes"
     }
